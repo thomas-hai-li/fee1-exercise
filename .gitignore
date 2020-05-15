@@ -1,0 +1,9 @@
+#node_modules
+node_modules
+
+#Editor files
+.editor-config
+.swp
+
+#pesky files
+.DS_Store
