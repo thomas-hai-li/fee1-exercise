@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <title>Surge</title>
 </head>
 
 <body>
@@ -13,44 +15,67 @@
   <div class="mainsection">
     <div class="banner">
       <a href="#">
-        <img class="logo" src="/brief/assets/Surge Logo.png" alt="Surge Logo">
+        <img class="logo-img" src="/brief/assets/Surge Logo.png" alt="Surge Logo">
       </a>
     </div>
-    <div class="column">
+    <div class="flex-column">
       <h1>
         <span class="logo-text">surge</span>
         for small businesses
       </h1>
-      <select name="main-image" id="main-select">
-        <option value="pizza">Dont like pizza and bears, change here!</option>
-        <option value="dog">Dog with shades</option>
-        <option value="storm">Storm Trooper</option>
-        <option value="pinneaple">Pinneaple Vacation</option>
-        <option value="donuts">Donuts</option>
-      </select>
-      <img id="img-main" src="/brief/assets/browser-images/Pizza and Bears.png" alt="">
+
+      <div class="dropdown">
+        <div class="dropdown-options">
+          <div class="option">
+            <input class="option__radio" type="radio" id="dog" name="category">
+            <label class="option__text" for="dog">Dog with shades</label>
+          </div>
+
+          <div class="option">
+            <input class="option__radio" type="radio" id="storm-trooper" name="category">
+            <label class="option__text" for="storm-trooper">Storm Trooper</label>
+          </div>
+
+          <div class="option">
+            <input class="option__radio" type="radio" id="pineapple" name="category">
+            <label class="option__text" for="pineapple">Pineapple Vacation</label>
+          </div>
+
+          <div class="option">
+            <input class="option__radio" type="radio" id="donuts" name="category">
+            <label class="option__text" for="donuts">Donuts</label>
+          </div>
+        </div>
+        <div class="selected" id="selected-option">
+          Don't like pizza and bears? Change here!
+        </div>
+      </div>
+      <img class="mainsection__img" src="/brief/assets/browser-images/Pizza and Bears.png" alt="Pizza and Bears">
     </div>
   </div>
 
   <div class="subsection">
-    <div class="column">
-      <h2 class="section-header">Surge your payments</h2>
-      <div class="row">
+    <div class="flex-column">
+      <h2 class="header">Surge your payments</h2>
+      <div class="flex-row">
         <div class="card">
-          <img src="/brief/assets/Icons/Notification Icon.svg" alt="Notification Icon">
-          <h3>Get Notifications</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, iusto exercitationem.</p>
+          <img class="card__icon" src="/brief/assets/Icons/Notification Icon.svg" alt="Notification Icon">
+          <h3 class="card__header">Get Notifications</h3>
+          <p class="card__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, iusto exercitationem.
+          </p>
         </div>
         <div class="card">
-          <img src="/brief/assets/Icons/Calendar Icon.svg" alt="Calendar Icon">
-          <h3>Schedule Payments</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores praesentium iste laboriosam, voluptatum
+          <img class="card__icon" src="/brief/assets/Icons/Calendar Icon.svg" alt="Calendar Icon">
+          <h3 class="card__header">Schedule Payments</h3>
+          <p class="card__body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores praesentium iste
+            laboriosam, voluptatum
             ducimus quisquam.</p>
         </div>
         <div class="card">
-          <img src="/brief/assets/Icons/Reciept Icon.svg" alt="Reciept Icon">
-          <h3>Paperless Receipts</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit itaque maxime molestiae inventore.
+          <img class="card__icon" src="/brief/assets/Icons/Reciept Icon.svg" alt="Reciept Icon">
+          <h3 class="card__header">Paperless Receipts</h3>
+          <p class="card__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit itaque maxime
+            molestiae inventore.
           </p>
         </div>
       </div>
@@ -58,10 +83,10 @@
   </div>
 
   <div class="subsection">
-    <div class="row">
-      <div class="side-caption">
-        <h2 class="section-header orange-light">Everyone loves a beautiful interface</h2>
-        <p>But the backend is what truely drives this seamless
+    <div class="flex-row">
+      <div class="subsection__summary">
+        <h2 class="header header--orange-1">Everyone loves a beautiful interface</h2>
+        <p>But the backend is what truly drives this seamless
           application. Making your life as a small business
           owner easier than every to track your spending.</p>
       </div>
@@ -69,19 +94,11 @@
     </div>
   </div>
 
-  <!-- <div id="todo">
-
-    <p>Later...</p>
-    <ul>
-      <li>remove hardcoded height on main container</li>
-      <li>rescale backgroudn img on main container</li>
-      <li>change every px to something else</li>
-    </ul>
-  </div> -->
-
   <div class="footer">
-    <img class="logo" src="/brief/assets/Surge Logo.png" alt="Surge Logo">
+    <img class="logo-img" src="/brief/assets/Surge Logo.png" alt="Surge Logo">
   </div>
+
+  <script src="js/main.js"></script>
 
 </body>
 
